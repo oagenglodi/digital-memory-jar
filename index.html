@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Memory Jar</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="background-shapes"></div>
+
+    <main class="container">
+
+        <header>
+            <p class="small-title">MY LITTLE</p>
+            <h1>Memory Jar </h1>
+
+            <p class="subtitle">
+                Keep your favourite moments somewhere special.
+            </p>
+
+            <button id="addMemoryBtn" class="add-button">
+                + Add a Memory
+            </button>
+        </header>
+
+
+        <section class="jar-section">
+
+            <div class="jar">
+
+                <div class="jar-lid">
+                    <div class="lid-top"></div>
+                </div>
+
+                <div class="jar-body">
+
+                    <div class="jar-shine"></div>
+
+                    <div id="memoryInsideJar" class="memory-inside"></div>
+
+                </div>
+
+            </div>
+
+            <p class="jar-label">
+                <span id="memoryCount">0</span> memories
+            </p>
+
+        </section>
+
+
+        <section class="letter-section">
+
+            <div class="letter">
+
+                <div class="paper-hole"></div>
+
+                <p class="letter-date" id="letterDate"></p>
+
+                <h2>Dear Memory...</h2>
+
+                <p>
+                    Write down a moment you never want to forget.
+                </p>
+
+                <button id="openLetterBtn" class="letter-button">
+                    Open the letter ✨
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="memories-section">
+
+            <div class="section-heading">
+                <div>
+                    <p class="small-title">YOUR COLLECTION</p>
+                    <h2>Saved Memories</h2>
+                </div>
+
+                <button id="clearAllBtn" class="clear-button">
+                    Clear all
+                </button>
+            </div>
+
+            <div id="memoryGrid" class="memory-grid">
+
+                <div id="emptyState" class="empty-state">
+                    <div class="empty-icon">💌</div>
+                    <h3>Your jar is empty</h3>
+                    <p>
+                        Add your first memory and watch it pop into the jar.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ADD MEMORY MODAL -->
+
+    <div id="memoryModal" class="modal">
+
+        <div class="modal-content">
+
+            <button class="close-button" id="closeModal">
+                ×
+            </button>
+
+            <p class="small-title">NEW MEMORY</p>
+
+            <h2>Write a Memory</h2>
+
+            <form id="memoryForm">
+
+                <label>
+                    Memory title
+                </label>
+
+                <input
+                    type="text"
+                    id="memoryTitle"
+                    placeholder="Give this memory a name..."
+                    required
+                >
+
+
+                <label>
+                    Your memory
+                </label>
+
+                <textarea
+                    id="memoryText"
+                    placeholder="What happened? Why do you want to remember it?"
+                    required
+                ></textarea>
+
+
+                <label>
+                    Add a photo or video
+                </label>
+
+                <div class="upload-box">
+
+                    <input
+                        type="file"
+                        id="memoryMedia"
+                        accept="image/*,video/*"
+                    >
+
+                    <span>📸 🎥</span>
+
+                    <p>
+                        Choose a photo or video
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="save-button"
+                >
+                    Put it in the jar 🫙
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- VIEW MEMORY MODAL -->
+
+    <div id="viewModal" class="modal">
+
+        <div class="modal-content view-content">
+
+            <button class="close-button" id="closeViewModal">
+                ×
+            </button>
+
+            <div id="viewMemory"></div>
+
+        </div>
+
+    </div>
+
+
+    <div id="toast" class="toast">
+        Memory added to your jar! 🫙
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
